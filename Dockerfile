@@ -1,3 +1,5 @@
 FROM livekit/livekit-server:latest
 
-CMD ["livekit-server"]
+COPY livekit.yaml /livekit.yaml
+
+CMD ["--config", "/livekit.yaml"]
